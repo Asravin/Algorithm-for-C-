@@ -1,4 +1,4 @@
-using system.Net.Sockets;
+using System.Net.Sockets;
 using System.Text;
 
 namespace Client
@@ -11,7 +11,7 @@ namespace Client
 
         public OurClient()
         {
-            client = new TcpClient("127.0.0.1", 3333)
+            client = new TcpClient("127.0.0.1", 3333);
             sWriter = new StreamWriter(client.GetStream(), Encoding.UTF8);
             sReader = new StreamReader(client.GetStream(), Encoding.UTF8);
             HandleCommunication();
